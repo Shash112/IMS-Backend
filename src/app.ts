@@ -20,7 +20,7 @@ const app:Express = express();
 app.use(helmet());
 app.use(cookieParser());
 app.use(cors({
-    origin: 'http://localhost:5173',
+    origin: 'https://linen-mallard-632222.hostingersite.com',
     credentials: true,
 }));
 app.use(express.json());
