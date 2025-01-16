@@ -18,7 +18,7 @@ validateEnv();
 const app:Express = express();
 
 app.use(cors({
-    origin: 'https://linen-mallard-632222.hostingersite.com',
+    origin: ['https://linen-mallard-632222.hostingersite.com', 'https://ims-frontent.onrender.com'],
     credentials: true,
 }));
 // app.use(cors());
