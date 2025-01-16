@@ -17,10 +17,11 @@ validateEnv();
 
 const app:Express = express();
 
-app.use(cors({
-    origin: 'https://linen-mallard-632222.hostingersite.com',
-    credentials: true,
-}));
+// app.use(cors({
+//     origin: 'https://linen-mallard-632222.hostingersite.com',
+//     credentials: true,
+// }));
+app.use(cors());
 
 app.use(helmet());
 app.use(cookieParser());
