@@ -27,6 +27,9 @@ app.use(helmet());
 app.use(cookieParser());
 app.use(express.json());
 
+app.use("/", (req, res) => {
+    res.status(200).json({"message": "Connected"});
+});
 app.use("/api/v1/auth", authRoutes);
 app.use("/api/v1/products", productRoutes);
 app.use("/api/v1/suppliers", supplierRoutes);
