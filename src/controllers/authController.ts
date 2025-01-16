@@ -8,6 +8,7 @@ import { IUserRequest } from "../constant/IUserRequest";
 const SALT_ROUNDS = 10;
 
 export const register = async (req: Request, res: Response, next: NextFunction): Promise<void> => {
+    console.log(req.body);
     const { name, role, email, password} = req.body;
 
     try {
