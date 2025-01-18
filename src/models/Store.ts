@@ -2,6 +2,7 @@ import mongoose, { Document, Schema, Model } from "mongoose";
 
 interface IStore extends Document {
     name: string;
+    branch: string;
     location: string;
     managerName: string;
 }
@@ -9,6 +10,10 @@ interface IStore extends Document {
 const storeSchema: Schema<IStore> = new mongoose.Schema(
     {
         name: {
+            type: String,
+            required: true,
+        },
+        branch: {
             type: String,
             required: true,
         },
